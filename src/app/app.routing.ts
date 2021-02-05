@@ -10,11 +10,12 @@ import { LoginComponent } from './views/login/login.component';
 import { LoginAdminComponent } from './views/admin/login-admin/login-admin.component';
 
 import { RegisterComponent } from './views/register/register.component';
+import { AdminLayoutComponent } from './containers/admin-layout/admin-layout.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'admin/login',
     pathMatch: 'full',
   },
   {
@@ -54,9 +55,9 @@ export const routes: Routes = [
   },
   {
     path: 'admin',
-    component: DefaultLayoutComponent,
+    component: AdminLayoutComponent,
     data: {
-      title: 'Home'
+      title: ''
     },
     children:[
       {
@@ -69,7 +70,7 @@ export const routes: Routes = [
     path: '',
     component: DefaultLayoutComponent,
     data: {
-      title: 'Home'
+      title: 'Admin'
     },
     children: [
       {
