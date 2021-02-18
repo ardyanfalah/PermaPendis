@@ -11,6 +11,7 @@ import { LoginAdminComponent } from './views/admin/login-admin/login-admin.compo
 
 import { RegisterComponent } from './views/register/register.component';
 import { AdminLayoutComponent } from './containers/admin-layout/admin-layout.component';
+import { UserLayoutComponent } from './containers/user-layout/user-layout.component';
 
 export const routes: Routes = [
   {
@@ -63,6 +64,19 @@ export const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./views/admin/admin.module').then(m => m.AdminModule)
+      },
+    ]
+  },
+  {
+    path: 'user',
+    component: UserLayoutComponent,
+    data: {
+      title: ''
+    },
+    children:[
+      {
+        path: '',
+        loadChildren: () => import('./views/profile/profile.module').then(m => m.ProfileModule)
       },
     ]
   },

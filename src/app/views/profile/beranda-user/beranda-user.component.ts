@@ -9,6 +9,10 @@ export class BerandaUserComponent implements OnInit {
 
   constructor() { }
 
+  daftarWebinarTerlaksana=[
+    0,1,2,3
+  ]
+
   ngOnInit(): void {
   }
 

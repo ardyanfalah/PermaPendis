@@ -47,10 +47,6 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserLayoutComponent } from './containers/user-layout/user-layout.component';
-import { BerandaUserComponent } from './views/profile/beranda-user/beranda-user.component';
-import { CariWebinarComponent } from './views/profile/cari-webinar/cari-webinar.component';
-import { DetailWebinarComponent } from './views/profile/detail-webinar/detail-webinar.component';
-import { PembayaranWebinarComponent } from './views/profile/pembayaran-webinar/pembayaran-webinar.component';
 
 @NgModule({
   imports: [
@@ -80,10 +76,6 @@ import { PembayaranWebinarComponent } from './views/profile/pembayaran-webinar/p
     RegisterComponent,
     AdminLayoutComponent,
     UserLayoutComponent,
-    BerandaUserComponent,
-    CariWebinarComponent,
-    DetailWebinarComponent,
-    PembayaranWebinarComponent,
   ],
   providers: [
     {
