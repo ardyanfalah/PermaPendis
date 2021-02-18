@@ -7,6 +7,7 @@ import { DaftarInstrukturComponent } from './daftar-instruktur/daftar-instruktur
 import { DaftarPenyelenggaraComponent } from './daftar-penyelenggara/daftar-penyelenggara.component';
 import { DaftarTransaksiComponent } from './daftar-transaksi/daftar-transaksi.component';
 import { DaftarJadwalComponent } from './daftar-jadwal/daftar-jadwal.component';
+
 const routes: Routes = [
   {
     path: '',

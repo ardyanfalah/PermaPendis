@@ -1,4 +1,39 @@
 // Here you can add other styles
+.app-footer{
+    padding: 0;
+}
+.footer{
+    background-color: #262626;
+    width: 100%;
+    .identity-container{
+        .title {
+           color: white; 
+        }
+        .alamat {
+            color: white;
+        }
+        .text{
+            color:white;
+        }
+        
+    }
+    .line{
+        border: 1px solid white;
+    }
+    .footnote{
+        text-align: center;
+        color: white;
+    }
+}
 .text-end{
     text-align: end;
+}
+.text-center{
+    text-align: center;
+}
+.text-white{
+    color: white;
+}
+.main .container-fluid {
+    padding: 0;
 }

@@ -6,7 +6,7 @@ import { DefaultLayoutComponent } from './containers';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
-import { LoginComponent } from './views/login/login.component';
+import { LoginComponent } from './views/user/login/login.component';
 import { LoginAdminComponent } from './views/admin/login-admin/login-admin.component';
 
 import { RegisterComponent } from './views/register/register.component';
@@ -15,7 +15,7 @@ import { AdminLayoutComponent } from './containers/admin-layout/admin-layout.com
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'admin/login',
+    redirectTo: 'beranda',
     pathMatch: 'full',
   },
   {
@@ -70,9 +70,13 @@ export const routes: Routes = [
     path: '',
     component: DefaultLayoutComponent,
     data: {
-      title: 'Admin'
+      title: ''
     },
     children: [
+      {
+        path: '',
+        loadChildren: () => import('./views/user/user.module').then(m => m.UserModule)
+      },
       {
         path: 'base',
         loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)

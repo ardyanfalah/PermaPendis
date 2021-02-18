@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
 
 // Import containers
 import { DefaultLayoutComponent } from './containers';
+import { AdminLayoutComponent } from './containers/admin-layout/admin-layout.component';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
@@ -25,7 +26,8 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 
 const APP_CONTAINERS = [
-  DefaultLayoutComponent
+  DefaultLayoutComponent,
+  AdminLayoutComponent
 ];
 
 import {
@@ -44,7 +46,11 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AdminLayoutComponent } from './containers/admin-layout/admin-layout.component';
+import { UserLayoutComponent } from './containers/user-layout/user-layout.component';
+import { BerandaUserComponent } from './views/profile/beranda-user/beranda-user.component';
+import { CariWebinarComponent } from './views/profile/cari-webinar/cari-webinar.component';
+import { DetailWebinarComponent } from './views/profile/detail-webinar/detail-webinar.component';
+import { PembayaranWebinarComponent } from './views/profile/pembayaran-webinar/pembayaran-webinar.component';
 
 @NgModule({
   imports: [
@@ -72,7 +78,12 @@ import { AdminLayoutComponent } from './containers/admin-layout/admin-layout.com
     P500Component,
     LoginComponent,
     RegisterComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    UserLayoutComponent,
+    BerandaUserComponent,
+    CariWebinarComponent,
+    DetailWebinarComponent,
+    PembayaranWebinarComponent,
   ],
   providers: [
     {

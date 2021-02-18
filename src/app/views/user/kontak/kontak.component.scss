@@ -1,0 +1,50 @@
+.container-kontak{
+    height:80vh;
+    background-color: #F5F5F5;
+    .container-title{
+        height: 60px;
+        width: fit-content;
+        background-color: #92CD36;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 52px;
+        border-radius: 0 0 32px 0;
+        margin-bottom:40px;
+        .title{
+            .title-text{
+                color: white;
+                font-size: 32px;
+            }
+        }
+    }
+    .container-info{
+        .container{
+            .box-info{
+
+                .info{
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    max-height: 400px;
+                    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+
+                }
+                .img{
+                    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+
+                    max-height: 400px;
+                    .img-kontak{
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+   
+}

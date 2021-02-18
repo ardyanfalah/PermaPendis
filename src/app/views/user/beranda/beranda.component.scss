@@ -1,0 +1,168 @@
+.container-beranda{
+    height:100%;
+    background-color: #F1F1F1;
+    .container-banner{
+        height:80vh;
+        width: 100vw;
+        .banner{
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("/../assets/img/Landing Page.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            .app-name{
+                margin-top: 64px;
+                .text{
+                    font-size: 40pt;
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+            .app-name-desc{
+                .text{
+                    font-size: 24px;
+                    color: white;
+                }
+            }
+            .button-container{
+                padding-left: 16px;
+                margin-top: 64px;
+                width: 100%;
+                .btn-custom{
+                    padding: 8px 0px;
+                    margin: 0 8px;
+                }
+            }
+            .hashtag-container{
+                margin-bottom: 56px;
+                .text{
+                    font-size: 24px;
+                    color: white;
+                }
+            }
+        }
+    }
+    .header-mitra{
+        width: 100%;
+        height: 16vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #92CD36;
+        .text{
+            font-size: 32px;
+            color: white;
+        }
+    }
+    .container-mitra{
+        background-color: white;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        .custom-card{
+            height: 160px;
+            width: 100%;
+            border: none;
+            .header{
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .img-mitra{
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .card-body{
+                height: 20%;
+                text-align: center;
+            }
+        }
+    }
+    .container-webinar{
+        width: 100%;
+        padding:32px 0;
+        margin:0;
+        .container{
+            margin: 0;
+            max-width: 100vw  !important;
+            .card{
+                width: 90%;
+                .card-header{
+                    padding: 0;
+                    .img-webinar{
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                }
+                .card-body{
+                    .fa{
+                        color: #7AC800;
+                    }
+                    .text{
+                        color: #7A7A7A;
+                    }
+                    .text-harga{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .header-webinar{
+            padding: 16px 64px;
+            .text{
+                font-size: 32px;
+                color: #7AC800;
+            }
+        }
+        
+    }
+    .container-counter{
+        padding-top: 16px;
+        margin: 16px 0px;
+        background-color: white;
+        .container{
+            margin: 0;
+            max-width: 100vw  !important;
+            .card{
+                border: none;
+                text-align: center;
+                margin-bottom: 0;
+                .title{
+                    color: #7AC800;
+                }
+                .card-body{
+                    padding: 16px 0;
+                    .fa{
+                        color: #7AC800;
+                        font-size: 24px;
+                    }
+                    .card-title{
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+    }
+    .container-testimoni{
+        width: 100%;
+        padding:16px 0;
+        .container{
+            .container-title{
+                padding: 0 24px;
+            }
+            width: 100%;
+            .card{
+                width: 90%;
+                text-align: center;
+                .card-body{
+                    .comment{
+                        text-align: start;
+                    }
+                }
+            }
+        }
+    }
+    
+}

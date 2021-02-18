@@ -1,0 +1,44 @@
+.container-penyelenggara{
+    .container-title{
+        height: 60px;
+        width: fit-content;
+        background-color: #92CD36;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 52px;
+        border-radius: 0 0 32px 0;
+        margin-bottom:16px;
+        .title{
+            .title-text{
+                color: white;
+                font-size: 32px;
+            }
+        }
+    }
+    .container-list-penyelenggara{
+        width: 100%;
+        padding:16px 0;
+        .container{
+            .container-title{
+                padding: 0 24px;
+                
+            }
+            width: 100%;
+            .card{
+                width: 100%;
+                text-align: center;
+                .card-body{
+                    .img-penyelenggara{
+                        width: 100%;
+                        max-height: 240px;
+                        object-fit: contain;
+                        margin-bottom: 24px;
+                        border-radius: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
