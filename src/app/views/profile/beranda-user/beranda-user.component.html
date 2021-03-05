@@ -1,9 +1,11 @@
-<div class="container-beranda">
-    <div class="container">
-        <h3>Daftar Webinar yang Diikuti</h3>
-        <div class="row justify-content-around">
+<div class="container-beranda px-5">
+    <div class="container-fluid">
+        <div class="container-title mb-4">
+            <h3>Daftar Webinar yang Diikuti</h3>
+        </div>
+        <div class="row justify-content-between">
             <div class="col-8">
-                <div class="search-container">
+                <div class="search-container mb-4">
                     <div class="input-group mb-6 mt-6 input-group-lg">
                         <input type="text" class="form-control" placeholder="Cari beranda" aria-label="Recipient's username" aria-describedby="button-addon2">
                         <div class="input-group-append">
@@ -11,64 +13,68 @@
                         </div>
                       </div>
                 </div>
-                <div *ngFor="let item of daftarWebinarTerlaksana; let i = index">
-                    <div class="card mb-3" style="max-height: 200px; width: 100%;">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
-                      
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <dl>
-                                                <dt class="mb-2">
-                                                    <h4 class="card-title">Analisis Data Kuantitatif dengan SPSS dan Lisrel (SEM)</h4>
-                                                </dt>
-                                                <dt>
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i> <span class="text">25 Januari 2021 - 26 Januari 2021</span>
-                                                </dt>
-                                                <dt>
-                                                    <i class="fa fa-clock-o" aria-hidden="true"></i>  <span class="text">08:00 - 12:00</span> 
-                                                </dt>
-                                                <dt>
-                                                    <i class="fa fa-link" aria-hidden="true"></i>     <span class="text">Live by Zoom</span>
-                                                </dt>
-                                            </dl>
-                                        </div>
-                                        <div class="col-4">
-                                            <div>
-                                                Menunggu Konfirmasi
+                <div class="list-webinar">
+                    <div *ngFor="let item of daftarWebinarTerlaksana; let i = index">
+                        <div class="card mb-3" style="max-height: 200px; width: 100%;">
+                            <div class="row no-gutters">
+                              <div class="col-md-4">
+                                <img src="assets/img/webinar.jpeg" width="100%" height="200" class="img-webinar" alt="">
+                          
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <dl>
+                                                    <dt class="mb-3">
+                                                        <h4 class="card-title">Analisis Data Kuantitatif dengan SPSS dan Lisrel (SEM)</h4>
+                                                    </dt>
+                                                    <dt class="mb-2">
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i> <span class="text">25 Januari 2021 - 26 Januari 2021</span>
+                                                    </dt>
+                                                    <dt class="mb-2">
+                                                        <i class="fa fa-clock-o" aria-hidden="true"></i>  <span class="text">08:00 - 12:00</span> 
+                                                    </dt>
+                                                    <dt class="mb-2">
+                                                        <i class="fa fa-link" aria-hidden="true"></i>     <span class="text">Live by Zoom</span>
+                                                    </dt>
+                                                </dl>
                                             </div>
-                                            <div>
-                                                <button type="button" class="btn btn-primary">Masuk</button>
+                                            <div class="col-4 container-status-webinar" >
+                                                <div class="status-webinar">
+                                                    <span class="text-status">Menunggu Konfirmasi</span> 
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn btn-warning btn-block" (click)="goToDetail()">Masuk</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                  
                                 </div>
-                              
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
+                    </div>
                 </div>
             </div>
             <div class="col-3">
-                <h4>
-                    Andre Hirata Heriansyah Hanafi
-                </h4>
-                <hr>
-                <h5>
-                    Total Webinar yang diikuti
-                </h5>
-                <br>
-                <h5>3</h5>
-                <hr>
-                <h5>Total Webinar Belum Selesai</h5>
-                <br>
-                <h5>2</h5>
+                <div class="aside-container">
+                    <h4 style="color: #7AC800;">
+                        Andre Hirata Heriansyah Hanafi
+                    </h4>
+                    <hr>
+                    <h5>
+                        Total Webinar yang diikuti
+                    </h5>
+                    <br>
+                    <h4 style="color: #7AC800;">3</h4>
+                    <hr>
+                    <h5>Total Webinar Belum Selesai</h5>
+                    <br>
+                    <h4 style="color: #F86C6B;">2</h4>
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,15 @@
+.container-detail{
+    .aside-container{
+        min-height: 320px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .img-webinar{
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+        max-height: 800px;
+        height: 100%;
+    }
+}

@@ -1,1 +1,86 @@
-<p>pembayaran-webinar works!</p>
+<div class="container container-pembayaran">
+    <div class="info-webinar">
+        <div class="card mb-3" style="max-height: 200px; width: 100%;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="assets/img/webinar.jpeg" width="100%" height="200" class="img-webinar" alt="">
+          
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                <dl>
+                                    <dt class="mb-3">
+                                        <h4 class="card-title">Analisis Data Kuantitatif dengan SPSS dan Lisrel (SEM)</h4>
+                                    </dt>
+                                    <dt class="mb-2">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i> <span class="text">25 Januari 2021 - 26 Januari 2021</span>
+                                    </dt>
+                                    <dt class="mb-2">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>  <span class="text">08:00 - 12:00</span> 
+                                    </dt>
+                                    <dt class="mb-2">
+                                        <i class="fa fa-link" aria-hidden="true"></i>     <span class="text">Live by Zoom</span>
+                                    </dt>
+                                </dl>
+                            </div>
+                            <div class="col-4 container-status-webinar" >
+                                <div class="status-webinar">
+                                    <span class="text-status">Webinar yang akan diikuti</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="info-pembayaran container">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Nama Lengkap</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <h5 style="font-weight: bold;">Pembayaran</h5>
+                    <br>    
+                    <div class="row">
+                        <div class="col">
+                            <p>Total yang harus dibayarkan</p>
+                            <p style="font-weight: bold;">RP. 50.000</p>
+                        </div>
+                        <div class="col">
+                            <p>No. Rekening</p>
+                            <p style="font-weight: bold;">BCA - 000111223345567 <br> Kode Bank : 014</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Nomor Handphone</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Upload Bukti Transfer</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                        </div>
+                    </div>
+                    >
+                    <div class="d-flex justify-content-end mt-4">
+                        <button type="button" class="btn btn-light btn-lg text-orange mr-2" (click)="goToCari()">Batalkan</button>
+                        <button type="button" class="btn btn-warning btn-lg text-white">Pesan</button>
+                    </div>
+                </div>
+            </div>
+          </form>
+        
+    </div>
+</div>

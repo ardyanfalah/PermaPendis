@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-
+import { ngxLoadingAnimationTypes, NgxLoadingModule } from 'ngx-loading';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpErrorHandlerService } from './handler/http-error-handler.service';
+import { NgxSelectModule } from 'ngx-select-ex';
+import { HttpConfigInterceptor } from './interceptor/httpconfig.interceptor';
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -19,6 +23,7 @@ import { AppComponent } from './app.component';
 // Import containers
 import { DefaultLayoutComponent } from './containers';
 import { AdminLayoutComponent } from './containers/admin-layout/admin-layout.component';
+import { SweetAlert } from './utilities/sweetalert';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
@@ -65,7 +70,15 @@ import { UserLayoutComponent } from './containers/user-layout/user-layout.compon
     IconModule,
     IconSetModule.forRoot(),
     NgbModule,
-    FormsModule
+    SweetAlert2Module.forRoot(),
+    FormsModule,
+    HttpClientModule,
+    NgxSelectModule,
+    NgxLoadingModule.forRoot({
+      animationType: ngxLoadingAnimationTypes.rectangleBounce,
+      primaryColour: '#293846',
+    }),
+
   ],
   declarations: [
     AppComponent,
@@ -78,10 +91,18 @@ import { UserLayoutComponent } from './containers/user-layout/user-layout.compon
     UserLayoutComponent,
   ],
   providers: [
+    SweetAlert,
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy
     },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpConfigInterceptor,
+      multi: true
+    },
+    HttpErrorHandlerService,
+
     IconSetService,
   ],
   bootstrap: [ AppComponent ]

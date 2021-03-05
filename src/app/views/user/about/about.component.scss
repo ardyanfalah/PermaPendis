@@ -1,0 +1,23 @@
+.container-title{
+    .title-container{
+        width: 100%;
+        height: 16vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #92CD36;
+        .text{
+            font-size: 32px;
+            color: white;
+        }
+    }
+}
+.container-about {
+    .img-webinar{
+        object-fit: contain;
+    }
+    .pdf-viewer-container{
+        width: 100%;
+        height: 500px;
+    }
+}

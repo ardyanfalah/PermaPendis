@@ -1,48 +1,49 @@
 .container-beranda{
     .search-container{
-        margin: 56px 56px 0 56px;
         .button-search{
             padding: 0 36px;
         }
     }
-    .container-beranda-new{
-        width: 100%;
-        padding:32px 0;
-        margin:0;
-        .container{
-            margin: 0;
-            max-width: 100vw  !important;
-            .card{
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                width: 90%;
-                .card-header{
-                    padding: 0;
-                    .img-beranda{
-                        object-fit: cover;
-                        object-position: top;
-                    }
+    .list-webinar{
+        .img-webinar{
+            object-fit: cover;
+            object-position: top;
+        }
+        .card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 90%;
+            .card-header{
+                padding: 0;
+                .img-beranda{
+                    object-fit: cover;
+                    object-position: top;
                 }
-                .card-body{
-                    .fa{
-                        color: #7AC800;
-                    }
-                    .text{
-                        color: #7A7A7A;
-                    }
-                    .text-harga{
-                        font-weight: bold;
-                    }
+            }
+            .card-body{
+                .fa{
+                    color: #7AC800;
+                }
+                .text{
+                    color: #7A7A7A;
+                }
+                .text-harga{
+                    font-weight: bold;
                 }
             }
         }
-        .header-beranda{
-            padding: 16px 64px;
-            .text{
-                font-size: 32px;
-                color: #7AC800;
+        .container-status-webinar{
+            display: flex;
+            flex-direction: column;
+            padding-right: 0;
+            .status-webinar{
+                .text-status{
+                    background-color: #F8F853;
+                    padding: 10px 8px;
+                    border-radius: 4px;
+                }
+                flex-grow:12;
             }
         }
-        
     }
     .container-beranda-done{
         width: 100%;
@@ -82,5 +83,11 @@
             }
         }
         
+    }
+    .aside-container{
+        min-height: 320px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }

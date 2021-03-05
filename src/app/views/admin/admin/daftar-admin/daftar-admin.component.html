@@ -1,0 +1,54 @@
+<div class="container-admin">
+    <h5>Admin</h5>
+    <div class="container">
+        <div class="row ">
+            <div class="col-2  offset-10 text-end p-0">
+                <button  class="btn btn-warning btn-lg" (click)="createAdmin()" >Tambah Admin</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header">
+          <span style="font-size:medium;font-weight: bold;">
+            Daftar Admin
+          </span>
+        </div>
+        <div class="card-body">
+            <table class="table ">
+                <thead>
+                  <tr>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of itemAdmin">
+                    <td>{{item.nama_admin}}</td>
+                    <td>{{item.email_admin}}</td>
+                    <td>{{ getRole(item.role_admin) }}</td>
+                    <td class="center-item"> 
+                      <div class="container">
+                          <div class="row  flex-nowrap">
+                            <div class="col-4 px-1" >
+                                <button type="button" class="btn btn-block btn-danger "  [disabled]="isSuperAdmin(item.role_admin)" (click)="deleteAdmin(item)">
+                                    Hapus
+                                </button>
+                              </div>
+                            <div class="col-4 px-1" >
+                              <button type="button" class="btn btn-info btn-block" [disabled]="isSuperAdmin(item.role_admin)" (click)="createAdmin(item)">
+                                  Edit
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                    </td>
+               </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+</div>
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px', fullScreenBackdrop:true }"></ngx-loading>

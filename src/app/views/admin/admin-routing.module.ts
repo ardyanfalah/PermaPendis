@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
-import { DaftarAdminComponent } from './daftar-admin/daftar-admin.component';
-import { DaftarPesertaComponent } from './daftar-peserta/daftar-peserta.component';
-import { DaftarInstrukturComponent } from './daftar-instruktur/daftar-instruktur.component';
-import { DaftarPenyelenggaraComponent } from './daftar-penyelenggara/daftar-penyelenggara.component';
-import { DaftarTransaksiComponent } from './daftar-transaksi/daftar-transaksi.component';
-import { DaftarJadwalComponent } from './daftar-jadwal/daftar-jadwal.component';
+import { CreateAdminComponent } from './admin/create-admin/create-admin.component';
+import { DaftarAdminComponent } from './admin/daftar-admin/daftar-admin.component';
+import { DaftarPesertaComponent } from './peserta/daftar-peserta/daftar-peserta.component';
+import { DaftarInstrukturComponent } from './instruktur/daftar-instruktur/daftar-instruktur.component';
+import { DaftarPenyelenggaraComponent } from './penyelenggara/daftar-penyelenggara/daftar-penyelenggara.component';
+import { DaftarTransaksiComponent } from './transaksi/daftar-transaksi/daftar-transaksi.component';
+import { DaftarJadwalComponent } from './webinar/daftar-jadwal/daftar-jadwal.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,13 @@ const routes: Routes = [
       {
         path: 'daftar-admin',
         component: DaftarAdminComponent,
+        data: {
+          title: 'Admin'
+        }
+      },
+      {
+        path: 'create-admin',
+        component: CreateAdminComponent,
         data: {
           title: 'Admin'
         }

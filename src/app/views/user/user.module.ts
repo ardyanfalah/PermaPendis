@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 import { UserRoutingModule } from './user-routing.module';
 import { BerandaComponent } from './beranda/beranda.component';
@@ -23,7 +24,9 @@ import { LoginComponent } from './login/login.component';
   imports: [
     CommonModule,
     UserRoutingModule,
-    FormsModule
+    FormsModule,
+    PdfViewerModule
+
   ]
 })
 export class UserModule { }

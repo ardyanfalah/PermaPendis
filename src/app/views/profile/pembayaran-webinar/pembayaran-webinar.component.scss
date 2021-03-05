@@ -1,0 +1,50 @@
+.container-pembayaran{
+    .info-webinar{
+        .img-webinar{
+            object-fit: cover;
+            object-position: top;
+        }
+        .card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 90%;
+            .card-header{
+                padding: 0;
+                .img-beranda{
+                    object-fit: cover;
+                    object-position: top;
+                }
+            }
+            .card-body{
+                .fa{
+                    color: #7AC800;
+                }
+                .text{
+                    color: #7A7A7A;
+                }
+                .text-harga{
+                    font-weight: bold;
+                }
+            }
+        }
+        .container-status-webinar{
+            display: flex;
+            flex-direction: column;
+            padding-right: 0;
+            .status-webinar{
+                align-self: flex-end;
+                .text-status{
+                    background-color: #F86C6B;
+                    padding: 10px 8px;
+                    border-radius: 4px;
+                    color: white;
+                }
+                flex-grow:12;
+            }
+        }
+    }
+    .info-pembayaran{
+        padding: 20px;
+        max-height: 500px;
+        background-color: white;
+    }
+}

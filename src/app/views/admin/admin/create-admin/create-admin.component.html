@@ -1,0 +1,57 @@
+<div class="container-create-admin">
+    <h5>Admin</h5>
+    <div class="">
+        <div class="card">
+            <div class="card-body">
+                <form class="formDokumen" (ngSubmit)="f.form.valid && sendData()" #f="ngForm" novalidate>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label for="exampleFormControlInput1">Nama</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" name="nama_admin" #nama_admin="ngModel" [(ngModel)]="dataAdmin.nama_admin" [ngClass]="{ 'is-invalid': f.submitted && nama_admin.invalid }" required >
+                            <div *ngIf="f.submitted && nama_admin.invalid" class="text-danger">
+                                <div >Nama admin is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="exampleFormControlInput1">Role</label>
+                            <ngx-select
+                                [items]="itemRole"
+                                [(ngModel)]="dataAdmin.role_admin"
+                                name="role_admin"
+                                optionValueField="value"
+                                optionTextField="text"
+                                #role_admin="ngModel"
+                                [ngClass]="{ 'is-invalid': f.submitted && role_admin.invalid }"
+                                [allowClear]="true"
+                                required
+                                >
+                            </ngx-select>
+                            <div *ngIf="f.submitted && role_admin.invalid" class="text-danger">
+                                <div >Role is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="exampleFormControlInput1">Email</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="dataAdmin.email_admin" placeholder="name@example.com" name="email_admin" #email_admin="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email_admin.invalid }" required>
+                            <div *ngIf="f.submitted && email_admin.invalid" class="text-danger">
+                                <div >Email is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="exampleFormControlInput1">Password</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="dataAdmin.password_admin"  name="password_admin" #password_admin="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password_admin.invalid }" required>
+                            <div *ngIf="f.submitted && password_admin.invalid" class="text-danger">
+                                <div >Password is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-secondary mr-2" (click)="goBack()">Kembali</button>
+                        <button type="submit" class="btn btn-warning text-white">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px', fullScreenBackdrop:true }"></ngx-loading>

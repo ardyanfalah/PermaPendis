@@ -16,6 +16,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   loginSubmit(){
-    this.router.navigateByUrl('/beranda');
+    this.router.navigateByUrl('/user/beranda');
   }
 }

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   constructor() { }
+  pdfUrl = "assets/doc/SK Pengukuhan Perma Pendis 2019.pdf"
 
   ngOnInit(): void {
   }

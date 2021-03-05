@@ -10,7 +10,6 @@ const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
   }),
-  withCredentials: true
 };
 
 @Injectable({
@@ -26,10 +25,23 @@ export class AccountService {
     httpErrorHandler: HttpErrorHandlerService,
     // public jwtHelper: JwtHelperService
   ) {
-    this.handleError = httpErrorHandler.createHandleError('MasterDataService');
+    this.handleError = httpErrorHandler.createHandleError('AccountService');
   }
 
-  getUserAccounts(): Observable<GeneralResponse> {
-    return this.http.get<GeneralResponse>(this.url + '/Account/User', httpOptions);
+  getAdminAll(): Observable<GeneralResponse> {
+    return this.http.get<GeneralResponse>(this.url + '/admins', httpOptions);
   }
+
+  postAdmin(param): Observable<GeneralResponse>{
+    return this.http.post<GeneralResponse>(this.url + '/admins',param, httpOptions);
+  }
+
+  updateAdmin(id,param): Observable<GeneralResponse>{
+    return this.http.put<GeneralResponse>(this.url + '/admins/'+id,param, httpOptions);
+  }
+
+  deleteAdmin(id): Observable<GeneralResponse>{
+    return this.http.delete<GeneralResponse>(this.url + '/admins/'+id, httpOptions);
+  }
+
 }

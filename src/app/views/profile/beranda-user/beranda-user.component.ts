@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-beranda-user',
@@ -7,13 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BerandaUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+
+  ) { }
 
   daftarWebinarTerlaksana=[
     0,1,2,3
   ]
 
   ngOnInit(): void {
+  }
+
+  goToDetail(){
+    this.router.navigateByUrl('/user/info-webinar');
   }
 
 }
