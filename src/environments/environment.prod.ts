@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  server : 'localhost/simet-appi'
+  server : 'https://privateaf.masuk.web.id'
 };

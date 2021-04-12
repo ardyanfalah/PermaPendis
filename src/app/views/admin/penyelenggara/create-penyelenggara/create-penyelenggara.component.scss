@@ -1,5 +1,5 @@
 #imageKTP{
-    height: 100%;
+    max-height: 250px;
     width: 100%;
 }
 .preview{
@@ -9,6 +9,7 @@
     display: flex;
     align-items: center; 
     justify-content: center; 
+    object-fit: contain;
 }
 
 .center-item{

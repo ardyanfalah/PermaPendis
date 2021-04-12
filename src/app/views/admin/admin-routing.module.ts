@@ -6,8 +6,12 @@ import { DaftarAdminComponent } from './admin/daftar-admin/daftar-admin.componen
 import { DaftarPesertaComponent } from './peserta/daftar-peserta/daftar-peserta.component';
 import { DaftarInstrukturComponent } from './instruktur/daftar-instruktur/daftar-instruktur.component';
 import { DaftarPenyelenggaraComponent } from './penyelenggara/daftar-penyelenggara/daftar-penyelenggara.component';
+import { CreatePenyelenggaraComponent } from './penyelenggara/create-penyelenggara/create-penyelenggara.component';
+
 import { DaftarTransaksiComponent } from './transaksi/daftar-transaksi/daftar-transaksi.component';
 import { DaftarJadwalComponent } from './webinar/daftar-jadwal/daftar-jadwal.component';
+import { CreateWebinarComponent } from './webinar/create-webinar/create-webinar.component';
+
 
 const routes: Routes = [
   {
@@ -54,7 +58,14 @@ const routes: Routes = [
         path: 'daftar-penyelenggara',
         component: DaftarPenyelenggaraComponent,
         data: {
-          title: 'Penyelenggar'
+          title: 'Penyelenggara'
+        }
+      },
+      {
+        path: 'create-penyelenggara',
+        component: CreatePenyelenggaraComponent,
+        data: {
+          title: 'Buat Penyelenggara'
         }
       },
       {
@@ -62,6 +73,13 @@ const routes: Routes = [
         component: DaftarJadwalComponent,
         data: {
           title: 'Dashboard'
+        }
+      },
+      {
+        path: 'create-webinar',
+        component: CreateWebinarComponent,
+        data: {
+          title: 'Buat Webinar'
         }
       },
       {

@@ -44,4 +44,6 @@ export class AccountService {
     return this.http.delete<GeneralResponse>(this.url + '/admins/'+id, httpOptions);
   }
 
+  
+
 }

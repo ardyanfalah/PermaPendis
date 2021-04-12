@@ -1,0 +1,53 @@
+<div class="container-create-penyelenggara">
+    <h5>Penyelenggara</h5>
+    <div class="">
+        <div class="card">
+            <div class="card-body">
+                <form class="formDokumen">
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1"> Judul</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"  placeholder="name@example.com" name="email_penyelenggara" >
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1">Poster</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" accept=".jpg" (change)="onFileSelect($event)">
+                            <label class="custom-file-label" for="customFile">{{fileName}}</label>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1"> Deskripsi</label>
+                        <input type="text" class="form-control" id="deksripsi"  placeholder="name@example.com" name="email_penyelenggara" >
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1">Tanggal</label>
+                        <input type="text"
+           placeholder="Datepicker"
+           class="form-control"
+           bsDatepicker
+           [bsConfig]="{ isAnimated: true }">
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1">Waktu</label>
+                        <timepicker [(ngModel)]="mytime" name="time"></timepicker>
+
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1">Tempat</label>
+                        <input type="text" class="form-control" id="tempat" placeholder="name@example.com" name="email_penyelenggara" >
+
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1">Catatan</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="name@example.com" name="email_penyelenggara" ></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-secondary mr-2" >Kembali</button>
+                        <button type="submit" class="btn btn-warning text-white">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px', fullScreenBackdrop:true }"></ngx-loading>

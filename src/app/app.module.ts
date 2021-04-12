@@ -13,6 +13,9 @@ import { HttpErrorHandlerService } from './handler/http-error-handler.service';
 import { NgxSelectModule } from 'ngx-select-ex';
 import { HttpConfigInterceptor } from './interceptor/httpconfig.interceptor';
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -65,6 +68,7 @@ import { UserLayoutComponent } from './containers/user-layout/user-layout.compon
     AppSidebarModule,
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
+    BsDatepickerModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
     IconModule,
@@ -78,7 +82,8 @@ import { UserLayoutComponent } from './containers/user-layout/user-layout.compon
       animationType: ngxLoadingAnimationTypes.rectangleBounce,
       primaryColour: '#293846',
     }),
-
+    CKEditorModule,
+    TimepickerModule.forRoot()
   ],
   declarations: [
     AppComponent,

@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ngxLoadingAnimationTypes, NgxLoadingModule } from 'ngx-loading';
+import { NgxSelectModule } from 'ngx-select-ex';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
@@ -11,11 +15,11 @@ import { DaftarInstrukturComponent } from './instruktur/daftar-instruktur/daftar
 import { DaftarPenyelenggaraComponent } from './penyelenggara/daftar-penyelenggara/daftar-penyelenggara.component';
 import { DaftarTransaksiComponent } from './transaksi/daftar-transaksi/daftar-transaksi.component';
 import { DaftarJadwalComponent } from './webinar/daftar-jadwal/daftar-jadwal.component';
-import { TabsModule } from 'ngx-bootstrap/tabs';
-import { ngxLoadingAnimationTypes, NgxLoadingModule } from 'ngx-loading';
 import { CreateAdminComponent } from './admin/create-admin/create-admin.component';
-import { NgxSelectModule } from 'ngx-select-ex';
 import { CreatePenyelenggaraComponent } from './penyelenggara/create-penyelenggara/create-penyelenggara.component';
+import { CreateWebinarComponent } from './webinar/create-webinar/create-webinar.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,7 @@ import { CreatePenyelenggaraComponent } from './penyelenggara/create-penyelengga
     DaftarPenyelenggaraComponent, 
     DaftarTransaksiComponent, 
     DaftarJadwalComponent, 
-    CreateAdminComponent, CreatePenyelenggaraComponent
+    CreateAdminComponent, CreatePenyelenggaraComponent, CreateWebinarComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +39,10 @@ import { CreatePenyelenggaraComponent } from './penyelenggara/create-penyelengga
     FormsModule,
     TabsModule,
     NgxLoadingModule,
-    NgxSelectModule
+    NgxSelectModule,
+    CKEditorModule,
+    BsDatepickerModule,
+    TimepickerModule
   ]
 })
 export class AdminModule { }
