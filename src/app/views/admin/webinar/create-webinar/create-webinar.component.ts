@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import {NgbDate, NgbCalendar, NgbDateParserFormatter} from '@ng-bootstrap/ng-bootstrap';
+import * as dayjs from 'dayjs'
 
 @Component({
   selector: 'app-create-webinar',
@@ -8,18 +9,69 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 })
 export class CreateWebinarComponent implements OnInit {
 
-  public Editor = ClassicEditor;
+  hoveredDate: NgbDate | null = null;
 
-  constructor() { }
+  fromDate: NgbDate | null;
+  toDate: NgbDate | null;
+  endTime = null;
+  startTime = null;
+  time = null;
+  data={};
+  imageSrc=""
+  selectedFile= null
+  fileName = ""
+
+  constructor(
+    private calendar: NgbCalendar, 
+    public formatter: NgbDateParserFormatter
+    ) {}
 
   ngOnInit(): void {
+    
   }
 
-  setEditor(){
-    var editorOptions = {
-      // enable file uploads from CKEditor
-      filebrowserImageUploadUrl: '/admin/upload'
-    };
+  ngOnChanges() {
+    this.changeStart(this.startTime)
+    this.changeEnd(this.endTime)
+  }
+
+  changeStart(data){
+    if(data){
+      var temp1 = dayjs(data).format('hh:mm A')
+      var temp2 = null
+      if(this.endTime != null){
+        temp2 = dayjs(this.endTime).format('hh:mm A')
+      }
+      this.time = temp1 + ' - ' + temp2
+    }
+  }
+
+  changeEnd(data){
+    if(data){
+      var temp2 = dayjs(data).format('hh:mm A')
+      var temp1 = null
+      if(this.endTime != null){
+        temp1 = dayjs(this.startTime).format('hh:mm A')
+      }
+      this.time = temp1 + ' - ' + temp2
+    }
+  }
+
+  onFileSelect(event) {
+    this.selectedFile = event.target.files[0];
+    this.fileName = this.selectedFile.name;
+    if (event.target.files && event.target.files[0]) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.imageSrc = e.target.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  }
+
+  sendData(){
+    var temp = dayjs(this.startTime).format('hh:mm A')
+    console.log(temp,this.startTime)
   }
 
 }

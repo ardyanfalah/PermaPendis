@@ -20,6 +20,7 @@ import { CreatePenyelenggaraComponent } from './penyelenggara/create-penyelengga
 import { CreateWebinarComponent } from './webinar/create-webinar/create-webinar.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TimepickerModule } from 'ngx-bootstrap/timepicker';
     CreateAdminComponent, CreatePenyelenggaraComponent, CreateWebinarComponent
   ],
   imports: [
+    NgbModule,
     CommonModule,
     AdminRoutingModule,
     FormsModule,

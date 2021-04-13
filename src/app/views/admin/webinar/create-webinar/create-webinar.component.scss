@@ -2,3 +2,17 @@
     justify-content: center;
     text-align: center;
 }
+#imagePreview{
+  max-height: 250px;
+  width: 100%;
+  object-fit: contain;
+}
+.preview{
+  text-align: center;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  object-fit: contain;
+}

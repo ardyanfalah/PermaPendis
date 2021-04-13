@@ -1,70 +1,143 @@
 <div class="container-create-penyelenggara">
-    <h5>Penyelenggara</h5>
-    <div class="">
-        <div class="card">
-            <div class="card-body">
-                <form class="formDokumen" (ngSubmit)="f.form.valid && sendData()" #f="ngForm" novalidate>
-                    <div class="row">
-                        <div class="form-group col-6">
-                            <label for="exampleFormControlInput1">Nama</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" name="nama_penyelenggara" #nama_penyelenggara="ngModel" [(ngModel)]="dataPenyelenggara.nama_penyelenggara" [ngClass]="{ 'is-invalid': f.submitted && nama_penyelenggara.invalid }" required >
-                            <div *ngIf="f.submitted && nama_penyelenggara.invalid" class="text-danger">
-                                <div >Nama penyelenggara is required</div>
-                            </div>
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="exampleFormControlInput1">Nomor Kontak/Telepon</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" name="hp_penyelenggara" #hp_penyelenggara="ngModel" [(ngModel)]="dataPenyelenggara.hp_penyelenggara" [ngClass]="{ 'is-invalid': f.submitted && hp_penyelenggara.invalid }" required >
-                            <div *ngIf="f.submitted && hp_penyelenggara.invalid" class="text-danger">
-                                <div >No Hp is required</div>
-                            </div>
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="exampleFormControlInput1">Email</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="dataPenyelenggara.email_penyelenggara" placeholder="name@example.com" name="email_penyelenggara" #email_penyelenggara="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email_penyelenggara.invalid }" required>
-                            <div *ngIf="f.submitted && email_penyelenggara.invalid" class="text-danger">
-                                <div >Email is required</div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group col-6">
-                            <label for="exampleFormControlInput1">Upload Gambar Logo Penyelenggara</label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="customFile" accept=".jpg" (change)="onFileSelect($event)">
-                                <label class="custom-file-label" for="customFile">{{fileName}}</label>
-                              </div>
-                        </div>
-                        <div class="form-group col-6" *ngIf="isEdit">
-                            <label for="exampleFormControlInput1">Status</label>
-                            <ngx-select
-                                [items]="itemStatus"
-                                [(ngModel)]="dataPenyelenggara.status"
-                                name="status"
-                                optionValueField="value"
-                                optionTextField="text"
-                                #status="ngModel"
-                                [ngClass]="{ 'is-invalid': f.submitted && status.invalid }"
-                                [allowClear]="true"
-                                >
-                            </ngx-select>
-                        </div>
-                        <div class="form-group col-6 ">
-                            <div class="form-group ">
-                                <div class=" center-item border preview">
-                                    <div  style=" background-color: #8e949a;">
-                                        <img id="imageKTP" [src]="imageSrc || 'http://placehold.it/180'" alt="your image" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn btn-secondary mr-2" (click)="goBack()">Kembali</button>
-                        <button type="submit" class="btn btn-warning text-white">Simpan</button>
-                    </div>
-                </form>
+  <h5>Penyelenggara</h5>
+  <div class="">
+    <div class="card">
+      <div class="card-body">
+        <form
+          class="formDokumen"
+          (ngSubmit)="f.form.valid && sendData()"
+          #f="ngForm"
+          novalidate
+        >
+          <div class="row">
+            <div class="form-group col-6">
+              <label for="exampleFormControlInput1">Nama</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                name="nama_penyelenggara"
+                #nama_penyelenggara="ngModel"
+                [(ngModel)]="dataPenyelenggara.nama_penyelenggara"
+                [ngClass]="{
+                  'is-invalid': f.submitted && nama_penyelenggara.invalid
+                }"
+                required
+              />
+              <div
+                *ngIf="f.submitted && nama_penyelenggara.invalid"
+                class="text-danger"
+              >
+                <div>Nama penyelenggara is required</div>
+              </div>
             </div>
-        </div>
+            <div class="form-group col-6">
+              <label for="exampleFormControlInput1">Nomor Kontak/Telepon</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                name="hp_penyelenggara"
+                #hp_penyelenggara="ngModel"
+                [(ngModel)]="dataPenyelenggara.hp_penyelenggara"
+                [ngClass]="{
+                  'is-invalid': f.submitted && hp_penyelenggara.invalid
+                }"
+                required
+              />
+              <div
+                *ngIf="f.submitted && hp_penyelenggara.invalid"
+                class="text-danger"
+              >
+                <div>No Hp is required</div>
+              </div>
+            </div>
+            <div class="form-group col-6">
+              <label for="exampleFormControlInput1">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                [(ngModel)]="dataPenyelenggara.email_penyelenggara"
+                placeholder="name@example.com"
+                name="email_penyelenggara"
+                #email_penyelenggara="ngModel"
+                [ngClass]="{
+                  'is-invalid': f.submitted && email_penyelenggara.invalid
+                }"
+                required
+              />
+              <div
+                *ngIf="f.submitted && email_penyelenggara.invalid"
+                class="text-danger"
+              >
+                <div>Email is required</div>
+              </div>
+            </div>
+
+            <div class="form-group col-6">
+              <label for="exampleFormControlInput1"
+                >Upload Gambar Logo Penyelenggara</label
+              >
+              <div class="custom-file">
+                <input
+                  type="file"
+                  class="custom-file-input"
+                  id="customFile"
+                  accept=".jpg"
+                  (change)="onFileSelect($event)"
+                />
+                <label class="custom-file-label" for="customFile">{{
+                  fileName
+                }}</label>
+              </div>
+            </div>
+            <div class="form-group col-6" *ngIf="isEdit">
+              <label for="exampleFormControlInput1">Status</label>
+              <ngx-select
+                [items]="itemStatus"
+                [(ngModel)]="dataPenyelenggara.status"
+                name="status"
+                optionValueField="value"
+                optionTextField="text"
+                #status="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && status.invalid }"
+                [allowClear]="true"
+              >
+              </ngx-select>
+            </div>
+            <div class="form-group col-6">
+              <div class="form-group">
+                <div class="center-item border preview">
+                  <div style="background-color: #8e949a">
+                    <img
+                      id="imageKTP"
+                      [src]="imageSrc || 'http://placehold.it/180'"
+                      alt="your image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button
+              type="button"
+              class="btn btn-secondary mr-2"
+              (click)="goBack()"
+            >
+              Kembali
+            </button>
+            <button type="submit" class="btn btn-warning text-white">
+              Simpan
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
-<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px', fullScreenBackdrop:true }"></ngx-loading>
+<ngx-loading
+  [show]="loading"
+  [config]="{ backdropBorderRadius: '3px', fullScreenBackdrop: true }"
+></ngx-loading>
